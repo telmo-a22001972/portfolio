@@ -55,6 +55,7 @@ def criar_post_page_view(request):
     return render(request, 'portfolio/criar_post.html', context)
 
 
+
 def web_page_view(request):
     if request.method == 'POST':
         name = request.POST['nome']+" "+request.POST['apelido']
