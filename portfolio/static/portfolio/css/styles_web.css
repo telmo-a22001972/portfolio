@@ -1,0 +1,44 @@
+.button_web {
+    border-bottom: 3px solid white;
+}
+
+main {
+    background: url("../images/web_bg_2.jpg") no-repeat fixed center;
+    background: #F5F5F5;
+
+}
+
+.quizz_div {
+    padding: 20px;
+}
+
+.quizz_titulo {
+    text-align: center;
+}
+
+.info_container {
+    width: 700px;
+    margin: auto;
+}
+
+legend {
+    text-align: center;
+}
+
+fieldset {
+    padding: 10px;
+}
+
+
+
+.perguntas_container {
+    width: 700px;
+    margin: auto;
+
+}
+
+.submit_btn {
+    position: absolute;
+    margin-top: 20px;
+    left: 50%;
+}

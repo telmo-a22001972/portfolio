@@ -17,3 +17,11 @@ class Post(models.Model):
 
     def __str__(self):
         return self.autor+": " +self.titulo + " - " + self.descricao[:30]
+
+class PontuacaoQuizz(models.Model):
+    nome = models.CharField(max_length=50)
+    pontuacao = models.IntegerField()
+    criacao = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.nome+" : "+str(self.pontuacao)

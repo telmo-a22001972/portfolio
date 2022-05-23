@@ -1,0 +1,67 @@
+{%  extends 'portfolio/layout.html' %}
+
+{% block main %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles_web.css' %}" type="text/css">
+
+	<div class="quizz_div">
+        <h1 class="quizz_titulo">Quizz</h1>
+         <form method="POST" action="" enctype="multipart/form-data">
+             {% csrf_token %}
+             <div class="info_container">
+                <fieldset>
+                    <legend class="info_legend">Info</legend>
+                    <p>Nome <input type="text" name="nome" placeholder="ex: Pedro" required></p>
+                    <p>Apelido <input type="text" name="apelido" placeholder="ex: Amarildo" required></p>
+                    <p>Email <input type="email" name="email" placeholder="ex: pedroamarildo2006@gmail.com" required></p>
+                </fieldset>
+             </div>
+
+             <div class="perguntas_container">
+                <fieldset>
+                    <legend>Perguntas</legend>
+                    <div>
+                        <p>Qual tag abaixo pertence a um menu de navegação?</p>
+                            <br>
+                            <input type="radio" name="p1" value="Item" id="item">
+                            <label for="item">item</label>
+                            <input type="radio" name="p1" value="Nav" id="nav">
+                            <label for="nav">nav</label>
+                            <input type="radio" name="p1" value="Menu" id="menu">
+                            <label for="menu">menu</label>
+
+                    </div>
+                    <br>
+                    <div>
+                        <p>Qual Tag abaixo pertence ao HTML?</p>
+                        <br>
+                        <input type="radio" name="p2" value="Super" id="super">
+                        <label for="super">super</label>
+                        <input type="radio" name="p2" value="Sup" id="sup">
+                        <label for="sup">sup</label>
+                        <input type="radio" name="p2" value="Weight" id="weight">
+                        <label for="weight">weight</label>
+
+                    </div>
+                    <br>
+                    <div>
+                        <label for="opcoes2">Como arredondar os cantos em CSS?</label>
+                        <input list="opcoes" name="p3" id="opcoes2">
+                        <datalist id="opcoes">
+                            <option value="border[round]: 30px;"></option>
+                            <option value="corner-effect: round;"></option>
+                            <option value="border-radius: 30px;"></option>
+                            <option value="alpha-effect: round-corner;"></option>
+                        </datalist>
+                    </div>
+
+                </fieldset>
+             </div>
+            <input type="submit" value="Submit" class="submit_btn">
+            </form>
+
+    </div>
+
+
+
+{% endblock %}
