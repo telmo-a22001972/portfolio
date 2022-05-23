@@ -1,0 +1,116 @@
+{%  extends 'portfolio/layout.html' %}
+
+{% block main %}
+    {% load static %}
+    <link href="{% static 'portfolio/css/styles_licenciatura.css'  %}" rel="stylesheet" type="text/css">
+
+
+    <div class="licenciatura_main">
+
+        <div class="split-conteiner">
+
+            <div class="info-side">
+                <div>
+                    <h2 class="titulo">Licenciatura</h2>
+
+                </div>
+                <br>
+                <br>
+
+                <div>
+                    <h3>
+                        Universidade Lusófona
+                        <br>
+                        de
+                        <br>Humanidades e Tecnologias
+                    </h3>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <h3>Engenharia Informática</h3>
+                    <h5>2º Ano - 2º Semestre</h5>
+                </div>
+                <br>
+                <br>
+                <div>
+                    {% load static %}
+                    <img src="{% static 'portfolio/images/lusofona_logo_teste3.png' %}" class="lusofona_logo">
+                </div>
+            </div>
+
+            <div class="cards-side">
+                <div class="cards-conteiner">
+                    <div class="card">
+                        <h2>Matemática Discreta</h2>
+                        <p>1º Ano - 1º Semestre</p>
+                        <p>Nota: 20</p>
+                        <p>Ranking 5/5 - ⭐⭐⭐⭐⭐</p>
+                        <p>Professores</p>
+                        <div class="professors_grid">
+                            <div class="professor">
+                                <h3>Teóricas</h3>
+                                <p>Teresa Almada</p>
+                                <a href="https://www.ulusofona.pt/docentes/teresa-maria-catanho-da-silva-almada" target="_blank">Lusófona</a>
+                            </div>
+                            <div class="professor">
+                                <h3>Práticas</h3>
+                                <p>Teresa Almada</p>
+                                <a href="https://www.ulusofona.pt/docentes/teresa-maria-catanho-da-silva-almada" target="_blank">Lusófona</a>
+                            </div>
+                        </div>
+                        <a class="link_disciplina" href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/matematica-discreta/ULHT260-1656" target="_blank">Ver mais</a>
+
+                    </div>
+                    <div class="card">
+                        <h2>Álgebra Linear</h2>
+                        <p>1º Ano - 2º Semestre</p>
+                        <p>Nota: 17</p>
+                        <p>Ranking 4/5 - ⭐⭐⭐⭐</p>
+                        <p>Professores</p>
+                        <div class="professors_grid">
+                            <div class="professor">
+                                <h3>Teóricas</h3>
+                                <p>Teresa Almada</p>
+                                <a href="https://www.ulusofona.pt/docentes/teresa-maria-catanho-da-silva-almada" target="_blank">Lusófona</a>
+                            </div>
+                            <div class="professor">
+                                <h3>Práticas</h3>
+                                <p>Anna Couto</p>
+                                <a href="https://www.ulusofona.pt/teachers/anna-carolina-nametala-finamore-do-couto" target="_blank">Lusófona</a>
+                                <a href="https://www.linkedin.com/in/anna-carolina-finamore-do-couto-aa7893114/" target="_blank">Linkedin</a>
+                            </div>
+                        </div>
+                        <a class="link_disciplina" href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica-redes-e-telecomunicacoes/algebra-linear/ULHT2531-2091" target="_blank">Ver mais</a>
+                    </div>
+                    <div class="card">
+                        <h2>LP2</h2>
+                        <p>2º Ano - 1º Semestre</p>
+                        <p>Nota: 16</p>
+                        <p>Ranking 4/5 - ⭐⭐⭐⭐</p>
+                        <p>Professores</p>
+                        <div class="professors_grid">
+                            <div class="professor">
+                                <h3>Teóricas</h3>
+                                <p>Pedro Alves</p>
+                                <a href="https://www.ulusofona.pt/docentes/pedro-hugo-de-queiros-alves" target="_blank">Lusófona</a>
+                                <a href="https://www.linkedin.com/in/palves/?originalSubdomain=pt" target="_blank">Linkedin</a>
+                            </div>
+                            <div class="professor">
+                                <h3>Práticas</h3>
+                                <p>Bruno Cipriano</p>
+                                <a href="https://www.ulusofona.pt/docentes/bruno-miguel-pereira-cipriano" target="_blank">Lusófona</a>
+                                <a href="https://www.linkedin.com/in/bruno-cipriano-1a49624/" target="_blank">Linkedin</a>
+                            </div>
+                        </div>
+                        <a class="link_disciplina" href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/linguagens-de-programacao-ii/ULHT260-898" target="_blank">Ver mais</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock main %}
+

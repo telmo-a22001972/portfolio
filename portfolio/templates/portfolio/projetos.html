@@ -1,0 +1,41 @@
+{%  extends 'portfolio/layout.html' %}
+
+{% block main %}
+    {% load static %}
+    <link href="{% static 'portfolio/css/styles_projetos.css'  %}" rel="stylesheet" type="text/css">
+
+    <div class="projetos_main">
+        <div class="titulo_div">
+            <h1>Projetos</h1>
+        </div>
+
+        <div class="cards-conteiner">
+            <div class="card">
+                <h2>SOVAC</h2>
+                <div>
+                    <p class="descricao">
+                        O objetivo geral do projeto será simular um
+                        sistema de pedidos e respostas genérico, com três tipos de participantes diferentes: clientes,
+                        proxies e servidores. Esta aplicação, chamada SOVAC, simula o processo de aquisição e
+                        distribuição de vacinas, onde os clientes são as instalações de saúde e farmacêuticas, os proxies são os serviços de distribuição,
+                        e os servidores são os laboratórios farmacêuticos que produzem e
+                        fornecem as vacinas.
+                    </p>
+                </div>
+                <p>Realizado em: 2021</p>
+                <p>Cadeira: Sistemas Operativos</p>
+                <div>
+                    <p>
+                        Participantes:
+                    </p>
+                    <a class="link_linkedin" href="https://www.linkedin.com/in/bernardobaltazar/" target="_blank">Bernardo Baltazar</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+{% endblock %}

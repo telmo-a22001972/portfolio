@@ -1,0 +1,28 @@
+{%  extends 'portfolio/layout.html' %}
+
+
+
+{% block main %}
+    {% load static %}
+    <link href="{% static 'portfolio/css/styles_home.css'  %}" rel="stylesheet" type="text/css">
+
+    <main class="main">
+        <h2 class="titulo">The universe doesn't sacrifice, life sacrifices</h2>
+
+    </main>
+
+{% endblock %}
+
+{% block article %}
+    <article class="primeiro">
+        <p>
+            <b><i>Porquê escolher Engenharia Informática?</i></b>
+            <br>
+            <br>
+            <img src="{% static 'portfolio/images/hero_graph.png' %}">
+        </p>
+  </article>
+
+    <article class="segundo"></article>
+
+{% endblock article %}

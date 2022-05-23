@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link href="../../static/portfolio/css/styles_layout.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="name_header">Telmo Panaças</div>
+
+        <nav class="navbar">
+            <a href="{%  url 'portfolio:home' %}" class="button_home">home</a>
+            <a href="{% url 'portfolio:licenciatura' %}" class="button_licenciatura">licenciatura</a>
+            <a href="{% url 'portfolio:projetos' %}" class="button_projectos">projectos</a>
+            <a href="{% url 'portfolio:posts' %}" class="button_blog">blog</a>
+            <a href="{% url 'portfolio:competencias' %}" class="button_competencias">competências</a>
+            <a href="">about</a>
+            <a href="">contacts</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        {% block main %}
+	    {% endblock main %}
+
+    </main>
+
+    <article>
+        {% block article %}
+        {% endblock article %}
+    </article>
+
+
+
+</body>
+<footer class="footer">
+    <p>
+        ULHT - 2022
+    </p>
+</footer>
+
+</html>

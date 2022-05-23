@@ -1,0 +1,36 @@
+{%  extends 'portfolio/layout.html' %}
+
+{% block main %}
+    {% load static %}
+    <link href="{% static 'portfolio/css/styles_posts.css'  %}" rel="stylesheet" type="text/css">
+
+	<h1>Blog</h1>
+
+    <div class="btn_div">
+        <a href="{% url 'portfolio:criar_post' %}" class="btn">+ Novo Post</a>
+    </div>
+
+    <div class="posts_container">
+
+        {% for post in posts %}
+
+            <div class="blog_post">
+                <h2>{{post.titulo}}</h2>
+                <br>
+                <br>
+                <p>{{post.descricao}}</p>
+                <br>
+                <br>
+                <br>
+                <div class="post_criacao">
+                    <p>Criado: {{post.criacao.day}}/{{post.criacao.month}}/{{post.criacao.year}} </p>
+                </div>
+                <div class="post_autor">
+                    <p>Autor: {{ post.autor }}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
