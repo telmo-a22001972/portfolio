@@ -18,6 +18,7 @@ urlpatterns = [
     path('posts', views.posts_page_view, name="posts"),
     path('criar_post', views.criar_post_page_view, name="criar_post"),
     path('web', views.web_page_view, name="web"),
+    path('cadeiras', views.cadeiras, name="cadeiras",)
 
 
 ]

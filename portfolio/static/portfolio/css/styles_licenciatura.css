@@ -13,7 +13,8 @@ main {
 
 .split-conteiner{
     display: grid;
-    height: 90vh;
+    min-height: 85vh;
+    height: 85vh;
     grid-template-columns: 60vh auto;
 }
 

@@ -1,0 +1,32 @@
+.split-conteiner{
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 60vh auto;
+}
+
+.info-side {
+    padding: 10px;
+    background: #0d0d0d;
+    color: white;
+    text-align: center;
+}
+.cards-side {
+    background-color: #0d0d0d;
+}
+
+.cards-conteiner {
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    color: white;
+    background: #1b1a1e;
+    width: 330px;
+    height: 450px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+}

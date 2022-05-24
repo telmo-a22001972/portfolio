@@ -1,0 +1,61 @@
+{%  extends 'portfolio/layout.html' %}
+
+{% block estilos %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles_cadeiras.css' %}" type="text/css">
+{% endblock %}
+
+{% block main %}
+    <div class="split-conteiner">
+        <div class="info-side">
+            <h1>Cadeiras</h1>
+            <h1>O PROBLEMA DO FOOTER ESTÁ NO SPLIT CONTEINER</h1>
+        </div>
+        <div class="cards-side">
+            <div class="cards-conteiner">
+        {% for cadeira in cadeiras %}
+            <div class="card">
+                {{ cadeira.nome}}
+                <br>
+                {{ cadeira.ano}}
+                <br>
+                {{ cadeira.semestre}}
+                <br>
+                {{ cadeira.nota}}
+                <br>
+                {{ cadeira.ranking}}
+                <br>
+                {% if cadeira.liguagens is not Blank %}
+                    {{ cadeira.linguagens}}
+                    <br>
+                {% endif %}
+
+                {{ cadeira.professor_teorica}}
+                <br>
+
+                {% for professor in cadeira.professor_pratica.all%}
+                    {{ professor }}
+                {% endfor %}
+
+                <br>
+
+                {% if cadeira.projetos is not Blank %}
+                    {% for projeto in cadeira.projetos.all %}
+                        {{projeto}}
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+{% endblock %}

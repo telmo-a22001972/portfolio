@@ -67,6 +67,11 @@ def web_page_view(request):
     return render(request, 'portfolio/web.html')
 
 
+def cadeiras(request):
+    context = {'cadeiras': sorted(Cadeira.objects.all(), key=lambda cadeira: cadeira.nota, reverse=True)}
+    return render(request, 'portfolio/cadeiras_temp.html', context)
+
+
 
 
 
