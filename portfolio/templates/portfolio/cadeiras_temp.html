@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block main %}
-    <div class="split-conteiner">
+    <div>
         <div class="info-side">
             <h1>Cadeiras</h1>
             <h1>O PROBLEMA DO FOOTER ESTÁ NO SPLIT CONTEINER</h1>
@@ -15,30 +15,45 @@
             <div class="cards-conteiner">
         {% for cadeira in cadeiras %}
             <div class="card">
-                {{ cadeira.nome}}
+                <p>{{ cadeira.nome}}</p>
                 <br>
-                {{ cadeira.ano}}
+                <p>{{ cadeira.ano}}º Ano - {{ cadeira.semestre }}º Semestre</p>
                 <br>
-                {{ cadeira.semestre}}
+                <p>Nota: {{ cadeira.nota}}</p>
                 <br>
-                {{ cadeira.nota}}
-                <br>
-                {{ cadeira.ranking}}
-                <br>
-                {% if cadeira.liguagens is not Blank %}
-                    {{ cadeira.linguagens}}
-                    <br>
+                {% if cadeira.ranking == 1 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐</p>
                 {% endif %}
-
-                {{ cadeira.professor_teorica}}
+                {% if cadeira.ranking == 2 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐</p>
+                {% endif %}
+                {% if cadeira.ranking == 3 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐</p>
+                {% endif %}
+                {% if cadeira.ranking == 4 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐</p>
+                {% endif %}
+                {% if cadeira.ranking == 5 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐⭐</p>
+                {% endif %}
+                <br>
+                <div class="professors_grid">
+                    <div>
+                        <h3>Teóricas</h3>
+                        <p>{{ cadeira.professor_teorica}}</p>
+                        <a href="" target="_blank" >Lusófona</a>
+                    </div>
+                    <div>
+                        <h3>Práticas</h3>
+                        <p>
+                            {% for professor in cadeira.professor_pratica.all%}
+                                {{ professor }}
+                            {% endfor %}
+                        </p>
+                    </div>
                 <br>
 
-                {% for professor in cadeira.professor_pratica.all%}
-                    {{ professor }}
-                {% endfor %}
-
-                <br>
-
+                </div>
                 {% if cadeira.projetos is not Blank %}
                     {% for projeto in cadeira.projetos.all %}
                         {{projeto}}

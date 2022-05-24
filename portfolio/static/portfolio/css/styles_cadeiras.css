@@ -1,7 +1,9 @@
 .split-conteiner{
     display: grid;
-    height: 90vh;
+    min-height: 85vh;
+    height: 85vh;
     grid-template-columns: 60vh auto;
+
 }
 
 .info-side {
@@ -15,7 +17,6 @@
 }
 
 .cards-conteiner {
-    margin-top: 110px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -29,4 +30,16 @@
     margin: 10px;
     border-radius: 20px;
     text-align: center;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.professors_grid {
+    margin: 10px;
+    display: grid;
+    height: 160px;
+    grid-template-columns: 150px 150px;
+    grid-column-gap: 5px;
 }
