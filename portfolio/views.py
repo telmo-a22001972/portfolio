@@ -53,6 +53,16 @@ def criar_post_page_view(request):
     return render(request, 'portfolio/criar_post.html', context)
 
 
+def criar_comentario_page_view(request):
+    form = ComentarioForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect('/posts')
+
+    context = {'form':form}
+
+    return render(request, 'portfolio/criar_comentario.html', context)
+
 
 def web_page_view(request):
     if request.method == 'POST':

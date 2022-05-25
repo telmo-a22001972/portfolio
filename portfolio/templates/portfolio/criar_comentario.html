@@ -1,9 +1,12 @@
-{%  extends 'portfolio/layout.html' %}
+{% extends 'portfolio/layout.html' %}
 
-{% block main %}
+{% block estilos %}
     {% load static %}
     <link href="{% static 'portfolio/css/styles_criar_post.css'  %}" rel="stylesheet" type="text/css">
-	<h1>Novo Post</h1>
+{% endblock %}
+
+{% block main %}
+    <h1>Adicionar Comentário</h1>
 
     <div class="container">
         <form action="" method="POST">
@@ -12,5 +15,4 @@
             <input type="submit" value="Post">
         </form>
     </div>
-
 {% endblock %}

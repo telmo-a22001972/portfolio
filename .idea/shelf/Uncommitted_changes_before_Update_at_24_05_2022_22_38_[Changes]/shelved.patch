@@ -1,0 +1,202 @@
+Index: portfolio/templates/portfolio/criar_post.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{%  extends 'portfolio/layout.html' %}\r\n\r\n{% block main %}\r\n    {% load static %}\r\n    <link href=\"{% static 'portfolio/css/styles_criar_post.css'  %}\" rel=\"stylesheet\" type=\"text/css\">\r\n\t<h1>Novo Post</h1>\r\n\r\n    <div class=\"container\">\r\n        <form action=\"\" method=\"POST\">\r\n            {% csrf_token %}\r\n            {{pontuacao.as_p}}\r\n            <input type=\"submit\" value=\"Post\">\r\n        </form>\r\n\r\n    </div>\r\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/portfolio/templates/portfolio/criar_post.html b/portfolio/templates/portfolio/criar_post.html
+--- a/portfolio/templates/portfolio/criar_post.html	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
++++ b/portfolio/templates/portfolio/criar_post.html	(date 1653398100319)
+@@ -8,7 +8,7 @@
+     <div class="container">
+         <form action="" method="POST">
+             {% csrf_token %}
+-            {{pontuacao.as_p}}
++            {{form.as_p}}
+             <input type="submit" value="Post">
+         </form>
+ 
+Index: portfolio/templates/portfolio/layout.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n\r\n{% load static %}\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Portfolio</title>\r\n    <link href=\"../../static/portfolio/css/styles_layout.css\" rel=\"stylesheet\" type=\"text/css\">\r\n\r\n\r\n</head>\r\n<body>\r\n    <header class=\"header\">\r\n        <div class=\"name_header\">Telmo Panaças</div>\r\n\r\n        <nav class=\"navbar\">\r\n            <a href=\"{%  url 'portfolio:home' %}\" class=\"button_home\">home</a>\r\n            <a href=\"{% url 'portfolio:licenciatura' %}\" class=\"button_licenciatura\">licenciatura</a>\r\n            <a href=\"{% url 'portfolio:projetos' %}\" class=\"button_projectos\">projectos</a>\r\n            <a href=\"{% url 'portfolio:posts' %}\" class=\"button_blog\">blog</a>\r\n            <a href=\"{% url 'portfolio:web' %}\" class=\"button_web\">web</a>\r\n            <a href=\"{% url 'portfolio:competencias' %}\" class=\"button_competencias\">competências</a>\r\n            <a href=\"\">about</a>\r\n            <a href=\"\">contacts</a>\r\n        </nav>\r\n    </header>\r\n\r\n\r\n    <main>\r\n\r\n        {% block main %}\r\n\t    {% endblock main %}\r\n\r\n    </main>\r\n\r\n    <article>\r\n        {% block article %}\r\n        {% endblock article %}\r\n    </article>\r\n\r\n\r\n\r\n</body>\r\n<footer class=\"footer\">\r\n    <p>\r\n        ULHT - 2022\r\n    </p>\r\n</footer>\r\n\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/portfolio/templates/portfolio/layout.html b/portfolio/templates/portfolio/layout.html
+--- a/portfolio/templates/portfolio/layout.html	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
++++ b/portfolio/templates/portfolio/layout.html	(date 1653398441436)
+@@ -6,7 +6,8 @@
+     <meta charset="UTF-8">
+     <title>Portfolio</title>
+     <link href="../../static/portfolio/css/styles_layout.css" rel="stylesheet" type="text/css">
+-
++    {% block link %}
++    {% endblock link %}
+ 
+ </head>
+ <body>
+Index: portfolio/templates/portfolio/posts.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{%  extends 'portfolio/layout.html' %}\r\n\r\n{% block main %}\r\n    {% load static %}\r\n    <link href=\"{% static 'portfolio/css/styles_posts.css'  %}\" rel=\"stylesheet\" type=\"text/css\">\r\n\r\n\t<h1>Blog</h1>\r\n\r\n    <div class=\"btn_div\">\r\n        <a href=\"{% url 'portfolio:criar_post' %}\" class=\"btn\">+ Novo Post</a>\r\n    </div>\r\n\r\n    <div class=\"posts_container\">\r\n\r\n        {% for post in posts %}\r\n\r\n            <div class=\"blog_post\">\r\n                <h2>{{post.titulo}}</h2>\r\n                <br>\r\n                <br>\r\n                <p>{{post.descricao}}</p>\r\n                <br>\r\n                <br>\r\n                <br>\r\n                <div class=\"post_criacao\">\r\n                    <p>Criado: {{post.criacao.day}}/{{post.criacao.month}}/{{post.criacao.year}} </p>\r\n                </div>\r\n                <div class=\"post_autor\">\r\n                    <p>Autor: {{ post.autor }}</p>\r\n                </div>\r\n            </div>\r\n        {% endfor %}\r\n\r\n    </div>\r\n\r\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/portfolio/templates/portfolio/posts.html b/portfolio/templates/portfolio/posts.html
+--- a/portfolio/templates/portfolio/posts.html	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
++++ b/portfolio/templates/portfolio/posts.html	(date 1653398466789)
+@@ -1,8 +1,12 @@
+ {%  extends 'portfolio/layout.html' %}
+ 
+-{% block main %}
++{% block link %}
+     {% load static %}
+     <link href="{% static 'portfolio/css/styles_posts.css'  %}" rel="stylesheet" type="text/css">
++{% endblock link %}
++
++{% block main %}
++
+ 
+ 	<h1>Blog</h1>
+ 
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
++++ /dev/null	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: .idea/lab9.iml
+===================================================================
+diff --git a/.idea/lab9.iml b/.idea/lab9.iml
+deleted file mode 100644
+--- a/.idea/lab9.iml	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
++++ /dev/null	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
+@@ -1,27 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="PYTHON_MODULE" version="4">
+-  <component name="FacetManager">
+-    <facet type="django" name="Django">
+-      <configuration>
+-        <option name="rootFolder" value="$MODULE_DIR$/config" />
+-        <option name="settingsModule" value="config/settings.py" />
+-        <option name="manageScript" value="$MODULE_DIR$/manage.py" />
+-        <option name="environment" value="&lt;map/&gt;" />
+-        <option name="doNotUseTestRunner" value="false" />
+-        <option name="trackFilePattern" value="migrations" />
+-      </configuration>
+-    </facet>
+-  </component>
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-  <component name="PyDocumentationSettings">
+-    <option name="format" value="PLAIN" />
+-    <option name="myDocStringFormat" value="Plain" />
+-  </component>
+-  <component name="TemplatesService">
+-    <option name="TEMPLATE_CONFIGURATION" value="Django" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/lab8.iml
+===================================================================
+diff --git a/.idea/lab8.iml b/.idea/lab8.iml
+deleted file mode 100644
+--- a/.idea/lab8.iml	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
++++ /dev/null	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
+@@ -1,20 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="PYTHON_MODULE" version="4">
+-  <component name="FacetManager">
+-    <facet type="django" name="Django">
+-      <configuration>
+-        <option name="rootFolder" value="$MODULE_DIR$/config" />
+-        <option name="settingsModule" value="config/settings.py" />
+-        <option name="manageScript" value="$MODULE_DIR$/manage.py" />
+-        <option name="environment" value="&lt;map/&gt;" />
+-        <option name="doNotUseTestRunner" value="false" />
+-        <option name="trackFilePattern" value="migrations" />
+-      </configuration>
+-    </facet>
+-  </component>
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Pipenv (portfolio_pre_blog)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
++++ b/.idea/misc.xml	(date 1653398278548)
+@@ -1,4 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Pipenv (portfolio_pre_blog)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Pipenv (portoflio)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/portoflio.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/portoflio.iml b/.idea/portoflio.iml
+--- a/.idea/portoflio.iml	(revision 7946ada1b2ce616b246b9a18e9183ce8cf5bea7e)
++++ b/.idea/portoflio.iml	(date 1653398006163)
+@@ -1,8 +1,32 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <module type="PYTHON_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="django" name="Django">
++      <configuration>
++        <option name="rootFolder" value="$MODULE_DIR$/config" />
++        <option name="settingsModule" value="config/settings.py" />
++        <option name="manageScript" value="$MODULE_DIR$/manage.py" />
++        <option name="environment" value="&lt;map/&gt;" />
++        <option name="doNotUseTestRunner" value="false" />
++        <option name="trackFilePattern" value="migrations" />
++      </configuration>
++    </facet>
++  </component>
+   <component name="NewModuleRootManager">
+     <content url="file://$MODULE_DIR$" />
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
++  <component name="PyDocumentationSettings">
++    <option name="format" value="PLAIN" />
++    <option name="myDocStringFormat" value="Plain" />
++  </component>
++  <component name="TemplatesService">
++    <option name="TEMPLATE_CONFIGURATION" value="Django" />
++    <option name="TEMPLATE_FOLDERS">
++      <list>
++        <option value="$MODULE_DIR$/portfolio/templates" />
++      </list>
++    </option>
++  </component>
+ </module>
+\ No newline at end of file

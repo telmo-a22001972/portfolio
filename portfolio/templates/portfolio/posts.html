@@ -16,7 +16,6 @@
     <div class="posts_container">
 
         {% for post in posts %}
-
             <div class="blog_post">
                 <h2>{{post.titulo}}</h2>
                 <br>
@@ -30,6 +29,17 @@
                 </div>
                 <div class="post_autor">
                     <p>Autor: {{ post.autor }}</p>
+                </div>
+                <div>
+                    <a href="{% url 'portfolio:criar_comentario' %}" class="btn">+ Novo Comentario</a>
+                </div>
+                <div class="comentarios_div">
+                    {% if post.comentarios is not Blank %}
+                        {% for comentario in post.comentarios.all %}
+                            {{comentario}}
+                            <br>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

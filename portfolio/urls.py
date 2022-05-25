@@ -17,6 +17,8 @@ urlpatterns = [
     path('criar_post', views.criar_post_page_view, name="criar_post"),
     path('web', views.web_page_view, name="web"),
     path('criar_cadeira', views.criar_cadeira_page_view, name="criar_cadeira"),
+    path('criar_comentario', views.criar_comentario_page_view, name='criar_comentario'),
+
 
 
 
