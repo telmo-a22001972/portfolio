@@ -57,6 +57,7 @@ class Cadeira(models.Model):
     ano = models.IntegerField()
     semestre = models.IntegerField()
     nota = models.IntegerField()
+    ects = models.IntegerField(default=0)
     ranking = models.IntegerField()
     linguagens = models.ManyToManyField(Linguagem, blank=True)
     professor_teorica = models.ForeignKey(Professor, on_delete=models.CASCADE)

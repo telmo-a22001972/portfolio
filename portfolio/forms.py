@@ -7,3 +7,8 @@ class PostForm(ModelForm):
         model = Post
         fields = '__all__'
 
+
+class CadeiraForm(ModelForm):
+    class Meta:
+        model = Cadeira
+        fields = '__all__'

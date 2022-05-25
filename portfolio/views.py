@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
-from .forms import PostForm
+from .forms import *
 from .models import *
 # Create your views here.
 from .quizz_functs import pontuacao_quizz
@@ -16,7 +16,8 @@ def layout_page_view(request):
 
 
 def about_page_view(request):
-    return render(request, 'portfolio/about.html')
+    context = {'cadeiras': sorted(Cadeira.objects.all(), key=lambda cadeira: cadeira.ano and cadeira.semestre)}
+    return render(request, 'portfolio/about.html', context)
 
 
 def apresentacao_page_view(request):
@@ -34,9 +35,6 @@ def formacao_page_view(request):
 def projetos_page_view(request):
     return render(request, 'portfolio/projetos.html')
 
-
-def licenciatura_page_view(request):
-    return render(request, 'portfolio/licenciatura.html')
 
 
 def posts_page_view(request):
@@ -66,10 +64,15 @@ def web_page_view(request):
 
     return render(request, 'portfolio/web.html')
 
+def criar_cadeira_page_view(request):
+    form = CadeiraForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect('/about')
 
-def cadeiras(request):
-    context = {'cadeiras': sorted(Cadeira.objects.all(), key=lambda cadeira: cadeira.nota, reverse=True)}
-    return render(request, 'portfolio/cadeiras_temp.html', context)
+    context = {'form':form}
+
+    return render(request, 'portfolio/criar_cadeira.html', context)
 
 
 

@@ -1,0 +1,92 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+     height: 85vh;
+}
+.button_licenciatura {
+    border-bottom: 3px solid white;
+}
+
+
+.split-conteiner{
+    display: grid;
+    min-height: 85vh;
+    height: 85vh;
+    grid-template-columns: 60vh auto;
+}
+
+.info-side {
+    padding: 10px;
+    background: #0d0d0d;
+    color: white;
+    text-align: center;
+}
+
+
+.titulo {
+    padding-top: 34px;
+}
+
+.cards-side {
+    background-color: #0d0d0d;
+}
+
+.cards-conteiner {
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    color: white;
+    background: #1b1a1e;
+    width: 330px;
+    height: 450px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.card p {
+    padding: 10px;
+}
+
+.professors_grid {
+    margin: 10px;
+    display: grid;
+    height: 160px;
+    grid-template-columns: 150px 150px;
+    grid-column-gap: 5px;
+}
+
+.professor {
+    padding-top: 10px;
+    margin: 5px;
+    background: #28282B;
+    border-radius: 10px;
+}
+
+
+.professor > a, .professor > a:hover, .professor > a:focus, .professor > a:active{
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #36454F;
+}
+
+.link_disciplina, .link_disciplina:hover, .link_disciplina:focus, .link_disciplina:active{
+    color: inherit;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #2D2926FF;
+}

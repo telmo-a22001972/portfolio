@@ -1,0 +1,18 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block estilos %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles_criar_cadeira.css' %}">
+{% endblock %}
+
+{% block main %}
+    <h1>Nova Cadeira</h1>
+    <div class="container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Post">
+        </form>
+
+    </div>
+{% endblock %}

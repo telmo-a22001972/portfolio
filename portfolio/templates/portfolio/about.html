@@ -1,6 +1,87 @@
 {%  extends 'portfolio/layout.html' %}
 
+{% block estilos %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles_about.css' %}" type="text/css">
+{% endblock %}
+
 {% block main %}
-	<h3>About</h3>
-    <p>texto texto texto texto texto texto texto </p>
+    <div class="licenciatura">
+        <div class="info-side">
+            <h1>Licenciatura</h1>
+            <h3 class="uni_name">Universidade Lusófona de Humanidades e Tecnologias</h3>
+            <br>
+        </div>
+
+        <div class="btn_div">
+            <a href="{% url 'portfolio:criar_cadeira' %}" class="btn">+ Novo Post</a>
+        </div>
+
+        <div class="cards-side">
+            <div class="cards-conteiner">
+        {% for cadeira in cadeiras %}
+            <div class="card">
+                <h2>{{ cadeira.nome}}</h2>
+                <br>
+                <p>{{ cadeira.ano}}º Ano - {{ cadeira.semestre }}º Semestre</p>
+                <br>
+                <p>Nota: {{ cadeira.nota}}</p>
+                <br>
+                <p>ECTS: {{ cadeira.ects }}</p>
+                <br>
+                {% if cadeira.ranking == 1 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐</p>
+                {% endif %}
+                {% if cadeira.ranking == 2 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐</p>
+                {% endif %}
+                {% if cadeira.ranking == 3 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐</p>
+                {% endif %}
+                {% if cadeira.ranking == 4 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐</p>
+                {% endif %}
+                {% if cadeira.ranking == 5 %}
+                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐⭐</p>
+                {% endif %}
+                <br>
+                <div class="professors_grid">
+                    <div class="professor">
+                        <h3>Teóricas</h3>
+                        <p>{{ cadeira.professor_teorica}}</p>
+                        <a href="{{ cadeira.professor_teorica.linkedin }}" target="_blank" >Lusófona</a>
+                        <a href="{{ cadeira.professor_teorica.linkedin }}" target="_blank">Lusófona</a>
+                    </div>
+                    <div class="professor">
+                        <h3>Práticas</h3>
+
+                        {% for professor in cadeira.professor_pratica.all%}
+                            <p>{{ professor }}</p>
+                            <a href="{{ professor.linkedin }}" target="_blank" >Lusófona</a>
+                            <a href="{{ professor.linkedin }}" target="_blank">Lusófona</a>
+                        {% endfor %}
+
+                    </div>
+                <br>
+
+                </div>
+                {% if cadeira.projetos is not Blank %}
+                    {% for projeto in cadeira.projetos.all %}
+                        {{projeto}}
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+
+
 {% endblock %}

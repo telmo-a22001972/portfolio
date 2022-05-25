@@ -8,7 +8,9 @@
     padding: 0;
 
 }
-
+main {
+    height: 85vh;
+}
 
 
 .titulo_div {
