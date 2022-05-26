@@ -38,7 +38,7 @@ def projetos_page_view(request):
 
 def posts_page_view(request):
     context = {'posts': sorted(Post.objects.all(), key=lambda objeto:objeto.criacao, reverse=True)}
-    return render(request, 'portfolio/posts.html', context)
+    return render(request, 'blog/posts.html', context)
 
 
 def criar_post_page_view(request):
@@ -49,7 +49,7 @@ def criar_post_page_view(request):
 
     context = {'form':form}
 
-    return render(request, 'portfolio/criar_post.html', context)
+    return render(request, 'blog/criar_post.html', context)
 
 
 def editar_post_page_view(request, post_id):
@@ -61,7 +61,7 @@ def editar_post_page_view(request, post_id):
         return HttpResponseRedirect('/posts')
 
     context = {'form': form, 'post_id': post_id}
-    return render(request, 'portfolio/editar_post.html', context)
+    return render(request, 'blog/editar_post.html', context)
 
 
 def criar_comentario_page_view(request):
@@ -72,7 +72,7 @@ def criar_comentario_page_view(request):
         return HttpResponseRedirect('/posts')
 
     context = {'form': form}
-    return render(request, 'portfolio/criar_comentario.html', context)
+    return render(request, 'blog/criar_comentario.html', context)
 
 
 def web_page_view(request):

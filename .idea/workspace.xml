@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="O blog está concluido v2.">
-      <change afterPath="$PROJECT_DIR$/blog/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Tentar separar os blog do portfolio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_criar_post.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/blog/css/styles_criar_post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_posts.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/blog/css/styles_posts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/images/blog_bg_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/blog/images/blog_bg_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/images/blog_bg_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/images/posts_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/images/posts_bg_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/criar_comentario.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/blog/criar_comentario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/criar_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/blog/criar_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/editar_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/blog/editar_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/blog/posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +59,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/portfolio/templates/blog" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\telmo\Desktop\portfolio_pre_blog\portfolio\static\blog\images" />
+      <recent name="C:\Users\telmo\Desktop\portfolio_pre_blog\portfolio\static\blog\css" />
+      <recent name="C:\Users\telmo\Desktop\portfolio_pre_blog\portfolio\static\blog" />
+      <recent name="C:\Users\telmo\Desktop\portfolio_pre_blog\portfolio\templates\blog" />
+      <recent name="C:\Users\telmo\Desktop\portfolio_pre_blog\blog\templates\blog" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="portoflio" type="Python.DjangoServer" factoryName="Django server">
@@ -89,6 +110,7 @@
       <workItem from="1653439166741" duration="589000" />
       <workItem from="1653440205082" duration="704000" />
       <workItem from="1653493303063" duration="6825000" />
+      <workItem from="1653598163968" duration="1141000" />
     </task>
     <task id="LOCAL-00001" summary="Já se adicionam cadeiras novas">
       <created>1653438954603</created>
@@ -111,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653590531167</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Tentar separar os blog do portfolio">
+      <created>1653595073111</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653595073111</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +162,8 @@
     <MESSAGE value="Já se adicionam cadeiras novas" />
     <MESSAGE value="O blog está concluido." />
     <MESSAGE value="O blog está concluido v2." />
-    <option name="LAST_COMMIT_MESSAGE" value="O blog está concluido v2." />
+    <MESSAGE value="Tentar separar os blog do portfolio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tentar separar os blog do portfolio" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
