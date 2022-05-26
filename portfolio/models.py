@@ -9,13 +9,6 @@ from django import forms
 # Para o campo não ser obrigatório mete-se ", blank= True"
 
 
-class Comentario(models.Model):
-    autor = models.CharField(max_length=20)
-    descricao = models.TextField()
-    criacao = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"{self.autor} - {self.descricao}"
 
 
 class Post(models.Model):
@@ -24,10 +17,21 @@ class Post(models.Model):
     descricao = models.TextField()
     criacao = models.DateTimeField(auto_now_add=True)
     autor = models.CharField(max_length=20)
-    comentarios = models.ManyToManyField(Comentario, blank=True)
 
     def __str__(self):
-        return self.autor+": " +self.titulo + " - " + self.descricao[:30]
+        return self.titulo+" - "+self.autor
+
+
+class Comentario(models.Model):
+    post = models.ForeignKey(Post, related_name="coments", on_delete=models.CASCADE)
+    autor = models.CharField(max_length=20)
+    conteudo = models.TextField()
+    criacao_data = models.DateTimeField(auto_now_add=True)
+
+
+    def __str__(self):
+        return '%s - %s' % (self.post.titulo, self.autor)
+
 
 
 class PontuacaoQuizz(models.Model):

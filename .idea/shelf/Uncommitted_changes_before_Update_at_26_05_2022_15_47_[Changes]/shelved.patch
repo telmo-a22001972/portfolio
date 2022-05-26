@@ -1,0 +1,120 @@
+Index: portfolio/templates/portfolio/cadeiras_temp.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{%  extends 'portfolio/layout.html' %}\r\n\r\n{% block estilos %}\r\n    {% load static %}\r\n    <link rel=\"stylesheet\" href=\"{% static 'portfolio/css/styles_cadeiras.css' %}\" type=\"text/css\">\r\n{% endblock %}\r\n\r\n{% block main %}\r\n    <div>\r\n        <div class=\"info-side\">\r\n            <h1>Cadeiras</h1>\r\n            <h1>O PROBLEMA DO FOOTER ESTÁ NO SPLIT CONTEINER</h1>\r\n        </div>\r\n        <div class=\"cards-side\">\r\n            <div class=\"cards-conteiner\">\r\n        {% for cadeira in cadeiras %}\r\n            <div class=\"card\">\r\n                <p>{{ cadeira.nome}}</p>\r\n                <br>\r\n                <p>{{ cadeira.ano}}º Ano - {{ cadeira.semestre }}º Semestre</p>\r\n                <br>\r\n                <p>Nota: {{ cadeira.nota}}</p>\r\n                <br>\r\n                {% if cadeira.ranking == 1 %}\r\n                    <p>Ranking {{ cadeira.ranking }}/5 ⭐</p>\r\n                {% endif %}\r\n                {% if cadeira.ranking == 2 %}\r\n                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐</p>\r\n                {% endif %}\r\n                {% if cadeira.ranking == 3 %}\r\n                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐</p>\r\n                {% endif %}\r\n                {% if cadeira.ranking == 4 %}\r\n                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐</p>\r\n                {% endif %}\r\n                {% if cadeira.ranking == 5 %}\r\n                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐⭐</p>\r\n                {% endif %}\r\n                <br>\r\n                <div class=\"professors_grid\">\r\n                    <div>\r\n                        <h3>Teóricas</h3>\r\n                        <p>{{ cadeira.professor_teorica}}</p>\r\n                        <a href=\"\" target=\"_blank\" >Lusófona</a>\r\n                    </div>\r\n                    <div>\r\n                        <h3>Práticas</h3>\r\n                        <p>\r\n                            {% for professor in cadeira.professor_pratica.all%}\r\n                                {{ professor }}\r\n                            {% endfor %}\r\n                        </p>\r\n                    </div>\r\n                <br>\r\n\r\n                </div>\r\n                {% if cadeira.projetos is not Blank %}\r\n                    {% for projeto in cadeira.projetos.all %}\r\n                        {{projeto}}\r\n                    {% endfor %}\r\n                {% endif %}\r\n\r\n            </div>\r\n            {% endfor %}\r\n        </div>\r\n    </div>\r\n\r\n\r\n\r\n    </div>\r\n\r\n\r\n\r\n\r\n\r\n{% endblock %}
+===================================================================
+diff --git a/portfolio/templates/portfolio/cadeiras_temp.html b/portfolio/templates/portfolio/cadeiras_temp.html
+--- a/portfolio/templates/portfolio/cadeiras_temp.html	
++++ b/portfolio/templates/portfolio/cadeiras_temp.html	
+@@ -13,64 +13,59 @@
+         </div>
+         <div class="cards-side">
+             <div class="cards-conteiner">
+-        {% for cadeira in cadeiras %}
+-            <div class="card">
+-                <p>{{ cadeira.nome}}</p>
+-                <br>
+-                <p>{{ cadeira.ano}}º Ano - {{ cadeira.semestre }}º Semestre</p>
+-                <br>
+-                <p>Nota: {{ cadeira.nota}}</p>
+-                <br>
+-                {% if cadeira.ranking == 1 %}
+-                    <p>Ranking {{ cadeira.ranking }}/5 ⭐</p>
+-                {% endif %}
+-                {% if cadeira.ranking == 2 %}
+-                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐</p>
+-                {% endif %}
+-                {% if cadeira.ranking == 3 %}
+-                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐</p>
+-                {% endif %}
+-                {% if cadeira.ranking == 4 %}
+-                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐</p>
+-                {% endif %}
+-                {% if cadeira.ranking == 5 %}
+-                    <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐⭐</p>
+-                {% endif %}
+-                <br>
+-                <div class="professors_grid">
+-                    <div>
+-                        <h3>Teóricas</h3>
+-                        <p>{{ cadeira.professor_teorica}}</p>
+-                        <a href="" target="_blank" >Lusófona</a>
+-                    </div>
+-                    <div>
+-                        <h3>Práticas</h3>
+-                        <p>
+-                            {% for professor in cadeira.professor_pratica.all%}
+-                                {{ professor }}
+-                            {% endfor %}
+-                        </p>
+-                    </div>
+-                <br>
++            {% for cadeira in cadeiras %}
++                <div class="card">
++                    <p>{{ cadeira.nome}}</p>
++                    <br>
++                    <p>{{ cadeira.ano}}º Ano - {{ cadeira.semestre }}º Semestre</p>
++                    <br>
++                    <p>Nota: {{ cadeira.nota}}</p>
++                    <br>
++                    {% if cadeira.ranking == 1 %}
++                        <p>Ranking {{ cadeira.ranking }}/5 ⭐</p>
++                    {% endif %}
++                    {% if cadeira.ranking == 2 %}
++                        <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐</p>
++                    {% endif %}
++                    {% if cadeira.ranking == 3 %}
++                        <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐</p>
++                    {% endif %}
++                    {% if cadeira.ranking == 4 %}
++                        <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐</p>
++                    {% endif %}
++                    {% if cadeira.ranking == 5 %}
++                        <p>Ranking {{ cadeira.ranking }}/5 ⭐⭐⭐⭐⭐</p>
++                    {% endif %}
++                    <br>
++                    <div class="professors_grid">
++                        <div>
++                            <h3>Teóricas</h3>
++                            <p>{{ cadeira.professor_teorica}}</p>
++                            <a href="" target="_blank" >Lusófona</a>
++                        </div>
++                        <div>
++                            <h3>Práticas</h3>
++                            <p>
++                                {% for professor in cadeira.professor_pratica.all%}
++                                    {{ professor }}
++                                {% endfor %}
++                            </p>
++                        </div>
++                        <br>
+ 
+-                </div>
+-                {% if cadeira.projetos is not Blank %}
+-                    {% for projeto in cadeira.projetos.all %}
+-                        {{projeto}}
+-                    {% endfor %}
+-                {% endif %}
++                    </div>
++                        {% if cadeira.projetos is not Blank %}
++                            {% for projeto in cadeira.projetos.all %}
++                                {{projeto}}
++                            {% endfor %}
++                        {% endif %}
+ 
+-            </div>
++                </div>
+             {% endfor %}
+         </div>
+     </div>
+ 
+ 
+-
+     </div>
+ 
+-
+-
+-
+-
+ {% endblock %}
+\ No newline at end of file

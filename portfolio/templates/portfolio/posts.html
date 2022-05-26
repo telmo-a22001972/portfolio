@@ -17,6 +17,7 @@
 
         {% for post in posts %}
             <div class="blog_post">
+                <a href="{% url 'portfolio:editar_post' post.id %}" class="btn_editar">Editar</a>
                 <h2>{{post.titulo}}</h2>
                 <br>
                 <br>
@@ -30,18 +31,30 @@
                 <div class="post_autor">
                     <p>Autor: {{ post.autor }}</p>
                 </div>
-                <div>
-                    <a href="{% url 'portfolio:criar_comentario' %}" class="btn">+ Novo Comentario</a>
-                </div>
-                <div class="comentarios_div">
-                    {% if post.comentarios is not Blank %}
-                        {% for comentario in post.comentarios.all %}
-                            {{comentario}}
-                            <br>
-                        {% endfor %}
-                    {% endif %}
-                </div>
             </div>
+            <div class="comentarios_div">
+                <h2>Comentários</h2>
+                <br>
+
+                {% if not post.coments.all %}
+                    Sem comentários... <a href="{% url 'portfolio:criar_comentario'%}" style="color: white;">Comentar</a>
+                {% else %}
+                    <a href="{% url 'portfolio:criar_comentario'%}" style="color: white;">Comentar</a>
+                    <br><br>
+                    {% for comentario in post.coments.all %}
+                        <strong>
+                            {{ comentario.autor }} - {{ comentario.criacao_data }}
+                        </strong>
+                        <br>
+                        {{ comentario.conteudo }}
+                        <br>
+                        <br>
+
+                    {% endfor %}
+
+                {% endif %}
+                </div>
+
         {% endfor %}
 
     </div>

@@ -2,6 +2,7 @@ from django.forms import ModelForm
 
 from .models import *
 
+
 class PostForm(ModelForm):
     class Meta:
         model = Post
@@ -14,7 +15,7 @@ class CadeiraForm(ModelForm):
         model = Cadeira
         fields = '__all__'
 
-class ComentarioForm(ModelForm):
+class ComentarioFrom(ModelForm):
     class Meta:
         model = Comentario
         fields = '__all__'

@@ -1,0 +1,16 @@
+{%  extends 'portfolio/layout.html' %}
+
+{% block main %}
+    {% load static %}
+    <link href="{% static 'portfolio/css/styles_criar_post.css'  %}" rel="stylesheet" type="text/css">
+	<h1>Novo Post</h1>
+
+    <div class="container">
+        <form action="{% url 'portfolio:editar_post' post_id %}" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Post">
+        </form>
+    </div>
+
+{% endblock %}
