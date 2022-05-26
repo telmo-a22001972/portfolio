@@ -4,7 +4,7 @@
 
 main {
     background-color: #0d0d0d;
-    height: 85vh;
+    min-height: 85vh;
 }
 
 main h1 {
@@ -16,7 +16,7 @@ main h1 {
 
 .container {
     background-color: #1b1a1e;
-    margin: 5px auto;
+    margin: auto;
     text-align: center;
     color: White;
     width: 500px;

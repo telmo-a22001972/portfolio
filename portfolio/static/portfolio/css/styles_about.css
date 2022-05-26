@@ -4,6 +4,7 @@
 
 main {
     background-color: #0d0d0d;
+    min-height: 85vh;
 }
 
 .split-conteiner{
