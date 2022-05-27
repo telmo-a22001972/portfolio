@@ -1,0 +1,74 @@
+.button_blog {
+    border-bottom: 3px solid white;
+}
+main {
+    min-height: 85vh;
+    background-size: cover;
+    background: url("../images/blog_bg_3.jpg") no-repeat fixed center;
+}
+
+
+main h1 {
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.posts_container {
+    text-align: center;
+    color: white;
+    margin: auto;
+    width: 800px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.blog_post {
+    padding: 30px;
+    margin: 15px auto 0;
+    background-color:  #0f0f0f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 500px;
+}
+
+.comentarios_div {
+    background-color: #36454F;
+    width: 500px;
+    text-align: center;
+    margin:auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px 15px 10px;
+}
+
+.btn_editar {
+    position: absolute;
+    right: 180px;
+    color: white;
+}
+
+.post_criacao {
+    position: absolute;
+    right: 180px;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.btn_div {
+    text-align: center;
+    padding: 15px;
+}
+.btn {
+    color: white;
+    background-color: #0f0f0f;
+    padding: 15px;
+    border-radius: 9px;
+}
+
+.post_autor {
+    position: absolute;
+    left: 180px;
+    font-size: 15px;
+}

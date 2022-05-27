@@ -1,5 +1,3 @@
-import datetime
-
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
@@ -71,35 +69,16 @@ def editar_post_page_view(request, post_id):
 
 
 def criar_comentario_page_view(request, post_id):
+    form = ComentarioFrom(request.POST or None)
     post = Post.objects.get(pk=post_id)
-    comment_id = Comentario.objects.all().count() + 1
 
-
-    if request.method == 'POST':
-        autor = request.POST['autor']
-        descricao = request.POST['descricao']
-        comment = Comentario(comment_id, post_id , autor, descricao)
-        comment.save()
-        post.coments.add(comment)
-        post.save()
-
+    if form.is_valid():
+        form.save()
         return HttpResponseRedirect('/posts')
 
-    context = {'post_id': post_id}
-
+    context = {'form': form, 'post_id': post_id}
     return render(request, 'blog/criar_comentario.html', context)
 
-
-#def criar_comentario_page_view(request, post_id):
-#    form = ComentarioFrom(request.POST or None)
-#    post = Post.objects.get(pk=post_id)
-#
-#    if form.is_valid():
-#        form.save()
-#        return HttpResponseRedirect('/posts')
-#
-#    context = {'form': form, 'post_id': post_id}
-#    return render(request, 'blog/criar_comentario.html', context)
 
 
 def web_page_view(request):

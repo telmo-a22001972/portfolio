@@ -1,0 +1,29 @@
+.button_about {
+    border-bottom: 3px solid white;
+}
+
+main {
+    background-color: #0d0d0d;
+    min-height: 85vh;
+}
+
+main h1 {
+    text-align: center;
+    color: White;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.container {
+    background-color: #1b1a1e;
+    margin: auto;
+    text-align: center;
+    color: White;
+    width: 500px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.container p {
+    margin: 20px;
+}

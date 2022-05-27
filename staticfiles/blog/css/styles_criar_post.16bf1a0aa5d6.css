@@ -1,0 +1,32 @@
+.button_blog {
+    border-bottom: 3px solid white;
+}
+
+main {
+    min-height: 90vh;
+    background-size: cover;
+    background: url("../images/blog_bg_3.e7b1c00b4d2f.jpg") no-repeat fixed center;
+    color: white;
+}
+
+main h1 {
+    text-align: center;
+    color: Black;
+    padding-top: 55px;
+    padding-bottom: 50px;
+}
+
+.container {
+    margin: 5px auto;
+    text-align: center;
+    color: white;
+    width: 500px;
+}
+
+.container p {
+    margin: 20px;
+    color: black;
+}
+
+
+

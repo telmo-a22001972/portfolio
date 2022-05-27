@@ -43,12 +43,11 @@
                     <br><br>
                     {% for comentario in post.coments.all %}
                         <strong>
-                            {{ comentario.autor }}
+                            {{ comentario.autor }} - {{ comentario.criacao_data }}
                         </strong>
                         <br>
                         {{ comentario.conteudo }}
                         <br>
-                        {{ comentario.id }}
                         <br>
 
                     {% endfor %}

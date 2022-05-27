@@ -11,11 +11,8 @@
     <div class="container">
         <form action="{% url 'portfolio:criar_comentario' post_id %}" method="POST">
             {% csrf_token %}
-            <input type="text" name="autor" placeholder="Autor" class="credenciais">
-            <br>
-            <input type="text" name="descricao" placeholder="Descrição" class="credenciais">
-            <br>
-            <button type="submit" value="Login" class="submit">Comentar</button>
+            {{form.as_p}}
+            <input type="submit" value="Post">
         </form>
     </div>
 {% endblock %}
