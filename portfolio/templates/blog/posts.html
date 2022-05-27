@@ -17,6 +17,7 @@
 
         {% for post in posts %}
             <div class="blog_post">
+
                 <a href="{% url 'portfolio:editar_post' post.id %}" class="btn_editar">Editar</a>
                 <h2>{{post.titulo}}</h2>
                 <br>

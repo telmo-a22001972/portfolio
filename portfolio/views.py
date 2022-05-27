@@ -71,9 +71,14 @@ def editar_post_page_view(request, post_id):
 def criar_comentario_page_view(request, post_id):
     form = ComentarioFrom(request.POST or None)
     post = Post.objects.get(pk=post_id)
+    new_comment = None
+
 
     if form.is_valid():
-        form.save()
+        new_comment = form.save(commit=False)
+        new_comment.post = post
+        new_comment.save()
+
         return HttpResponseRedirect('/posts')
 
     context = {'form': form, 'post_id': post_id}
