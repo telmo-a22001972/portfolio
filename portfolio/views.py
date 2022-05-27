@@ -19,7 +19,7 @@ def layout_page_view(request):
 
 
 def about_page_view(request):
-    context = {'cadeiras': sorted(Cadeira.objects.all(), key=lambda cadeira: cadeira.ano and cadeira.semestre)}
+    context = {'cadeiras': sorted(Cadeira.objects.all(), key=lambda cadeira: cadeira.ano and cadeira.semestre and cadeira.nota)}
     return render(request, 'portfolio/about.html', context)
 
 
@@ -71,8 +71,6 @@ def editar_post_page_view(request, post_id):
 def criar_comentario_page_view(request, post_id):
     form = ComentarioFrom(request.POST or None)
     post = Post.objects.get(pk=post_id)
-    new_comment = None
-
 
     if form.is_valid():
         new_comment = form.save(commit=False)
@@ -83,7 +81,6 @@ def criar_comentario_page_view(request, post_id):
 
     context = {'form': form, 'post_id': post_id}
     return render(request, 'blog/criar_comentario.html', context)
-
 
 
 def web_page_view(request):

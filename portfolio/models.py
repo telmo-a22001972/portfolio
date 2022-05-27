@@ -49,7 +49,7 @@ class Linguagem(models.Model):
 
 
 class Professor(models.Model):
-    nome = models.CharField(max_length=20)
+    nome = models.CharField(max_length=30)
     linkedin = models.CharField(max_length=150, blank=True)
     universidade = models.CharField(max_length=150, blank=True)
 
@@ -65,7 +65,7 @@ class Projeto(models.Model):
 
 
 class Cadeira(models.Model):
-    nome = models.CharField(max_length=20)
+    nome = models.CharField(max_length=50)
     ano = models.IntegerField()
     semestre = models.IntegerField()
     nota = models.IntegerField()
