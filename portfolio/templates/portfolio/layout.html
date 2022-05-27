@@ -14,16 +14,26 @@
 <body>
     <header class="header">
         <div class="name_header">Telmo Panaças</div>
+        {% if request.user.is_authenticated %}
+            <nav class="navbar">
+                <a href="{%  url 'portfolio:home' %}" class="button_home">home</a>
+                <a href="{% url 'portfolio:about' %}" class="button_about">about</a>
+                <a href="{% url 'portfolio:projetos' %}" class="button_projectos">projectos</a>
+                <a href="{% url 'portfolio:posts' %}" class="button_blog">blog</a>
+                <a href="{% url 'portfolio:web' %}" class="button_web">web</a>
+                <a href="{% url 'portfolio:logout' %}" class="button_login">logout</a>
+            </nav>
+        {% else %}
+            <nav class="navbar">
+                <a href="{%  url 'portfolio:home' %}" class="button_home">home</a>
+                <a href="{% url 'portfolio:about' %}" class="button_about">about</a>
+                <a href="{% url 'portfolio:projetos' %}" class="button_projectos">projectos</a>
+                <a href="{% url 'portfolio:posts' %}" class="button_blog">blog</a>
+                <a href="{% url 'portfolio:web' %}" class="button_web">web</a>
+                <a href="{% url 'portfolio:login' %}" class="button_login">login</a>
+            </nav>
+        {% endif %}
 
-        <nav class="navbar">
-            <a href="{%  url 'portfolio:home' %}" class="button_home">home</a>
-            <a href="{% url 'portfolio:about' %}" class="button_about">about</a>
-            <a href="{% url 'portfolio:projetos' %}" class="button_projectos">projectos</a>
-            <a href="{% url 'portfolio:posts' %}" class="button_blog">blog</a>
-            <a href="{% url 'portfolio:web' %}" class="button_web">web</a>
-
-
-        </nav>
     </header>
 
     <main>

@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 
 # Create your models here.
@@ -7,9 +8,6 @@ from django.db import models
 from django import forms
 
 # Para o campo não ser obrigatório mete-se ", blank= True"
-
-
-
 
 class Post(models.Model):
 
@@ -72,7 +70,7 @@ class Cadeira(models.Model):
     semestre = models.IntegerField()
     nota = models.IntegerField()
     ects = models.IntegerField(default=0)
-    ranking = models.IntegerField()
+    ranking = models.IntegerField(validators=[MinValueValidator(0),MaxValueValidator(5)])
     linguagens = models.ManyToManyField(Linguagem, blank=True)
     professor_teorica = models.ForeignKey(Professor, on_delete=models.CASCADE)
     professor_pratica = models.ManyToManyField(Professor, related_name='professor_pratica')

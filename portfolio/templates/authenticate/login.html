@@ -1,0 +1,27 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block estilos %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/css/styles_login.css' %}" type="text/css">
+{% endblock %}
+
+{% block main %}
+
+    <div class="div">
+        <h2>Login</h2>
+        {% if message %}
+            <p style="text-align: center"> {{ message }} </p>
+        {% endif %}
+        <br><br><br>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" class="credenciais">
+            <br>
+            <input type="password" name="password" placeholder="Password" class="credenciais">
+            <br>
+            <button type="submit" value="Login" class="submit">SIGN IN</button>
+        </form>
+    </div>
+{% endblock %}
+
+

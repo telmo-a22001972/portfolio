@@ -1,0 +1,17 @@
+Index: portfolio/templates/portfolio/criar_comentario.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'portfolio/layout.html' %}\r\n\r\n{% block estilos %}\r\n    {% load static %}\r\n    <link href=\"{% static 'portfolio/css/styles_criar_post.css'  %}\" rel=\"stylesheet\" type=\"text/css\">\r\n{% endblock %}\r\n\r\n{% block main %}\r\n    <h1>Adicionar Comentário</h1>\r\n\r\n    <div class=\"container\">\r\n        <form action=\"\" method=\"POST\">\r\n            {% csrf_token %}\r\n            {{form.as_p}}\r\n            <input type=\"submit\" value=\"Post\">\r\n        </form>\r\n    </div>\r\n{% endblock %}
+===================================================================
+diff --git a/portfolio/templates/portfolio/criar_comentario.html b/portfolio/templates/portfolio/criar_comentario.html
+--- a/portfolio/templates/portfolio/criar_comentario.html	
++++ b/portfolio/templates/portfolio/criar_comentario.html	
+@@ -11,7 +11,7 @@
+     <div class="container">
+         <form action="" method="POST">
+             {% csrf_token %}
+-            {{form.as_p}}
++            {{comentario.as_p}}
+             <input type="submit" value="Post">
+         </form>
+     </div>
