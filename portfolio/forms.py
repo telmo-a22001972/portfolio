@@ -15,7 +15,9 @@ class CadeiraForm(ModelForm):
         model = Cadeira
         fields = '__all__'
 
+
 class ComentarioFrom(ModelForm):
     class Meta:
         model = Comentario
         fields = '__all__'
+

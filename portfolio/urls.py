@@ -18,7 +18,7 @@ urlpatterns = [
     path('editar_post/<int:post_id>', views.editar_post_page_view, name="editar_post"),
     path('web', views.web_page_view, name="web"),
     path('criar_cadeira', views.criar_cadeira_page_view, name="criar_cadeira"),
-    path('criar_comentario', views.criar_comentario_page_view, name='criar_comentario'),
+    path('criar_comentario/<int:post_id>/comentario', views.criar_comentario_page_view, name='criar_comentario'),
     path('login', views.login_page_view, name='login'),
     path('logout', views.logout_page_view, name='logout'),
 

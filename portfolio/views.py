@@ -1,3 +1,5 @@
+import datetime
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
@@ -68,15 +70,36 @@ def editar_post_page_view(request, post_id):
     return render(request, 'blog/editar_post.html', context)
 
 
-def criar_comentario_page_view(request):
-    form = ComentarioFrom(request.POST or None)
+def criar_comentario_page_view(request, post_id):
+    post = Post.objects.get(pk=post_id)
+    comment_id = Comentario.objects.all().count() + 1
 
-    if form.is_valid():
-        form.save()
+
+    if request.method == 'POST':
+        autor = request.POST['autor']
+        descricao = request.POST['descricao']
+        comment = Comentario(comment_id, post_id , autor, descricao)
+        comment.save()
+        post.coments.add(comment)
+        post.save()
+
         return HttpResponseRedirect('/posts')
 
-    context = {'form': form}
+    context = {'post_id': post_id}
+
     return render(request, 'blog/criar_comentario.html', context)
+
+
+#def criar_comentario_page_view(request, post_id):
+#    form = ComentarioFrom(request.POST or None)
+#    post = Post.objects.get(pk=post_id)
+#
+#    if form.is_valid():
+#        form.save()
+#        return HttpResponseRedirect('/posts')
+#
+#    context = {'form': form, 'post_id': post_id}
+#    return render(request, 'blog/criar_comentario.html', context)
 
 
 def web_page_view(request):
@@ -90,6 +113,7 @@ def web_page_view(request):
     return render(request, 'portfolio/web.html')
 
 
+@login_required()
 def criar_cadeira_page_view(request):
     form = CadeiraForm(request.POST or None)
     if form.is_valid():

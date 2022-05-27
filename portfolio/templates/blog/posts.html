@@ -37,17 +37,18 @@
                 <br>
 
                 {% if not post.coments.all %}
-                    Sem comentários... <a href="{% url 'portfolio:criar_comentario'%}" style="color: white;">Comentar</a>
+                    Sem comentários... <a href="{% url 'portfolio:criar_comentario' post.id %}" style="color: white;">Comentar</a>
                 {% else %}
-                    <a href="{% url 'portfolio:criar_comentario'%}" style="color: white;">Comentar</a>
+                    <a href="{% url 'portfolio:criar_comentario' post.id %}" style="color: white;">Comentar</a>
                     <br><br>
                     {% for comentario in post.coments.all %}
                         <strong>
-                            {{ comentario.autor }} - {{ comentario.criacao_data }}
+                            {{ comentario.autor }}
                         </strong>
                         <br>
                         {{ comentario.conteudo }}
                         <br>
+                        {{ comentario.id }}
                         <br>
 
                     {% endfor %}

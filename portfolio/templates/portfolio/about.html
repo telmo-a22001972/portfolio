@@ -13,9 +13,12 @@
             <br>
         </div>
 
-        <div class="btn_div">
-            <a href="{% url 'portfolio:criar_cadeira' %}" class="btn">+ Nova Cadeira</a>
-        </div>
+        {% if request.user.is_authenticated %}
+            <div class="btn_div">
+                <a href="{% url 'portfolio:criar_cadeira' %}" class="btn">+ Nova Cadeira</a>
+            </div>
+        {% endif %}
+
 
         <div class="cards-side">
             <div class="cards-conteiner">
