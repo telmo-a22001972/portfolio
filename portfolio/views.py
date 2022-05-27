@@ -64,6 +64,7 @@ def editar_post_page_view(request, post_id):
         return HttpResponseRedirect('/posts')
 
     context = {'form': form, 'post_id': post_id}
+
     return render(request, 'blog/editar_post.html', context)
 
 

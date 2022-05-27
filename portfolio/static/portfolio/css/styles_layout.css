@@ -12,13 +12,6 @@ main {
     min-width: 100%;
 }
 
-.button_login {
-    background-color: #F5D10D;
-    border-radius: 15px;
-    margin-right: 10px;
-    padding: 20px
-}
-
 .header {
     min-height: 10vh;
     height: 10vh;
@@ -47,6 +40,13 @@ main {
     color: white;
 }
 
+
+.button_login {
+    background-color: #F5D10D;
+    border-radius: 15px;
+    margin-right: 10px;
+    padding: 20px
+}
 
 footer {
     min-height: 5vh;
