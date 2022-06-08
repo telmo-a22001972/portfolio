@@ -9,6 +9,15 @@ from django import forms
 
 # Para o campo não ser obrigatório mete-se ", blank= True"
 
+class Pessoa(models.Model):
+    nome = models.TextField(max_length=80)
+    linkin = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.nome
+
+
+
 class Post(models.Model):
 
     titulo = models.CharField(max_length=60)
@@ -78,6 +87,18 @@ class Cadeira(models.Model):
 
     def __str__(self):
         return f"{self.nome} - Professor: {self.professor_teorica}"
+
+
+class Tfc_terceiros(models.Model):
+    autores = models.ManyToManyField(Pessoa, related_name="autores")
+    orientadores = models.ManyToManyField(Pessoa, related_name="orientadores")
+    ano = models.IntegerField()
+    titulo = models.TextField(max_length=50)
+    resumo = models.CharField(max_length=1000)
+    github_link = models.URLField()
+
+    def __str__(self):
+        return f"{self.titulo} - {str(self.autores.all())}"
 
 
 

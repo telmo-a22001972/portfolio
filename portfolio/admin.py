@@ -10,3 +10,6 @@ admin.site.register(Professor)
 admin.site.register(Cadeira)
 admin.site.register(Linguagem)
 admin.site.register(Comentario)
+admin.site.register(Pessoa)
+admin.site.register(Tfc_terceiros)
+

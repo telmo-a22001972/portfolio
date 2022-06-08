@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Os comentarios ja funcionam">
+    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Pasta blog separada">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2022_14_12_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2022_14_12__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2022_22_38_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2022_22_38__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_40_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_40__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_48_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_48__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_48__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_projetos.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_projetos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +114,8 @@
       <workItem from="1653598163968" duration="1141000" />
       <workItem from="1653658605914" duration="15450000" />
       <workItem from="1653685632758" duration="4430000" />
+      <workItem from="1654267145619" duration="1113000" />
+      <workItem from="1654674119235" duration="4524000" />
     </task>
     <task id="LOCAL-00001" summary="Já se adicionam cadeiras novas">
       <created>1653438954603</created>
