@@ -38,6 +38,51 @@
         <div class="titulo_div" style="padding-top: 70px">
             <h1>TFCs DEISI</h1>
         </div>
+        <br><br>
+        {% if request.user.is_authenticated %}
+            <div class="btn_div">
+                <a href="{% url 'portfolio:criar_tfc' %}" class="btn">+ Novo TFC</a>
+            </div>
+        {% endif %}
+
+        <div class="cards-conteiner">
+
+            {% for tfc in tfcs %}
+                <div class="tfc_card">
+                    <h2>{{ tfc.titulo }}</h2>
+                    <br>
+                    <div style="text-align: justify">
+                        <p style="white-space: pre-wrap;">{{ tfc.resumo}}</p>
+                    </div>
+
+                    <br>
+                    <br>
+                    <div class="grid_conteiner">
+                        <div class="grid_1">
+
+                            <p>Realizado por:</p>
+                            {% for autor in tfc.autores.all %}
+                                <li>{{ autor }}</li>
+                            {% endfor %}
+                            <br>
+                            <p>Orientadores:</p>
+                            {% for orientador in tfc.orientadores.all %}
+                                <li>{{ orientador }}</li>
+                            {% endfor %}
+
+                        </div>
+
+                        <div class="grid_2">
+                            <p>Ano de realização: {{ tfc.ano }}</p>
+                            <br>
+                            <a href="{{ tfc.github_link }}" target="_blank" class="link_linkedin">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
     </div>
 
 

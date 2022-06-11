@@ -12,4 +12,6 @@ admin.site.register(Linguagem)
 admin.site.register(Comentario)
 admin.site.register(Pessoa)
 admin.site.register(Tfc_terceiros)
+admin.site.register(Tfc_autor)
+admin.site.register(Tfc_orientador)
 

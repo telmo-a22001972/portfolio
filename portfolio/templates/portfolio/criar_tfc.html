@@ -1,0 +1,20 @@
+{%  extends 'portfolio/layout.html' %}
+
+{% block estilos %}
+    {% load static %}
+    <link href="{% static 'portfolio/css/styles_criar_tfc.css'  %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block main %}
+
+	<h1>Novo TFC</h1>
+
+    <div class="container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Post">
+        </form>
+    </div>
+
+{% endblock %}

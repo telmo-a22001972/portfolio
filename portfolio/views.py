@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-
 from .forms import *
 from .models import *
 # Create your views here.
@@ -19,7 +18,7 @@ def layout_page_view(request):
 
 
 def about_page_view(request):
-    context = {'cadeiras': sorted(Cadeira.objects.all(), key=lambda cadeira: cadeira.ano and cadeira.semestre and cadeira.nota)}
+    context = {'cadeiras': sorted(Cadeira.objects.all(), key=lambda cadeira: cadeira.ano and cadeira.semestre)}
     return render(request, 'portfolio/about.html', context)
 
 
@@ -36,7 +35,9 @@ def formacao_page_view(request):
 
 
 def projetos_page_view(request):
-    return render(request, 'portfolio/projetos.html')
+    context = {'tfcs' : Tfc_terceiros.objects.all()}
+
+    return render(request, 'portfolio/projetos.html', context)
 
 
 def posts_page_view(request):
@@ -135,4 +136,14 @@ def logout_page_view(request):
                 'message': 'Foi desconetado.'
             })
 
+
+def criar_tfc_page_view(request):
+    form = TfcForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect('/projetos')
+
+    context = {'form':form}
+
+    return render(request, 'portfolio/criar_tfc.html', context)
 

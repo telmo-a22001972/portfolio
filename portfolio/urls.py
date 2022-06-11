@@ -21,6 +21,7 @@ urlpatterns = [
     path('criar_comentario/<int:post_id>/comentario', views.criar_comentario_page_view, name='criar_comentario'),
     path('login', views.login_page_view, name='login'),
     path('logout', views.logout_page_view, name='logout'),
+    path('criar_tfc', views.criar_tfc_page_view, name='criar_tfc'),
 
 
 

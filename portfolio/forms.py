@@ -22,3 +22,9 @@ class ComentarioFrom(ModelForm):
         fields = ('autor', 'conteudo')
 
 
+class TfcForm(ModelForm):
+        class Meta:
+            model = Tfc_terceiros
+            fields = '__all__'
+
+

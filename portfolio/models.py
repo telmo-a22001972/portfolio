@@ -17,7 +17,6 @@ class Pessoa(models.Model):
         return self.nome
 
 
-
 class Post(models.Model):
 
     titulo = models.CharField(max_length=60)
@@ -88,18 +87,34 @@ class Cadeira(models.Model):
     def __str__(self):
         return f"{self.nome} - Professor: {self.professor_teorica}"
 
+class Tfc_autor(models.Model):
+    nome = models.TextField(max_length=80)
+    linkin = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.nome
+
+
+class Tfc_orientador(models.Model):
+    nome = models.TextField(max_length=80)
+    linkin = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.nome
+
+
 
 class Tfc_terceiros(models.Model):
-    autores = models.ManyToManyField(Pessoa, related_name="autores")
-    orientadores = models.ManyToManyField(Pessoa, related_name="orientadores")
+    autores = models.ManyToManyField(Tfc_autor, related_name="autores")
+    orientadores = models.ManyToManyField(Tfc_orientador, related_name="orientadores")
     ano = models.IntegerField()
-    titulo = models.TextField(max_length=50)
-    resumo = models.CharField(max_length=1000)
+    titulo = models.CharField(max_length=50)
+    resumo = models.TextField(max_length=1000)
     github_link = models.URLField()
 
     def __str__(self):
-        return f"{self.titulo} - {str(self.autores.all())}"
 
+        return f"{self.titulo} - {list((self.autores.all()))}"
 
 
 

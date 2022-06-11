@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Pasta blog separada">
+    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Mudei tamanho do nome da cadeira">
+      <change afterPath="$PROJECT_DIR$/portfolio/migrations/0022_tfc_autor_tfc_orientador.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/migrations/0023_alter_tfc_terceiros_autores_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_criar_tfc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/criar_tfc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2022_14_12_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2022_14_12__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2022_22_38_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2022_22_38__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_40_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_40__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_48_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_48__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2022_22_48__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_projetos.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_projetos.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -56,11 +54,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/portfolio/static/authenticate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/portfolio/templates/portfolio" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\templates\portfolio" />
       <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\authenticate" />
       <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\blog\images" />
     </key>
@@ -116,6 +115,7 @@
       <workItem from="1653685632758" duration="4430000" />
       <workItem from="1654267145619" duration="1113000" />
       <workItem from="1654674119235" duration="4524000" />
+      <workItem from="1654953732494" duration="5200000" />
     </task>
     <task id="LOCAL-00001" summary="Já se adicionam cadeiras novas">
       <created>1653438954603</created>
