@@ -9,20 +9,17 @@
 
 }
 main {
-    height: 85vh;
-}
-
-
-.titulo_div {
     background: #0d0d0d;
+}
+.titulo_div {
+    background: transparent;
     padding-top: 30px;
     text-align: center;
 }
 
+
 .projetos_main {
     color: white;
-    background: #0d0d0d;
-    height: 90vh;
 }
 
 
@@ -61,3 +58,44 @@ main {
     text-decoration: none;
     border-bottom: 3px solid white;
 }
+
+.TFCS_div {
+    color:white;
+}
+
+.btn_div {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    color: white;
+    background-color: #1b1a1e;
+    padding: 15px;
+    border-radius: 9px;
+}
+
+.tfc_card {
+    color: white;
+    background: #1b1a1e;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.grid_conteiner {
+    display: grid;
+    grid-template-columns: auto 70%;
+}
+
+.grid_1 {
+    text-align: left
+}
+
+.grid_2 {
+}
+
