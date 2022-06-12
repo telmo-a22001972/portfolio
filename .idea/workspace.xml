@@ -1,35 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="TFCs layout feito">
-      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/js/time.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/testes_js/js/colors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/testes_js/js/counter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/testes_js/js/input_color.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/testes_js/js/ipma.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/web/images/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/web/images/transferir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/web/js/google_search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/web/js/ipma.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/testes_js/IPMA.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/testes_js/colors.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/testes_js/input_color.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/testes_js/javascript_testes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_criar_tfc.84da3010540e.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_criar_tfc.84da3010540e.css.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_criar_tfc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_criar_tfc.css.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_projetos.e35456d91872.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_projetos.e35456d91872.css.gz" afterDir="false" />
+    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Feito APIs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_home.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_web.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/web/css/styles_web.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/web.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/web/web.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/web/css/styles_web.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/web/css/styles_web.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/web/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/web/images/temp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/web/images/transferir.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +111,7 @@
       <workItem from="1654953732494" duration="6559000" />
       <workItem from="1654991143103" duration="1137000" />
       <workItem from="1654999634044" duration="166000" />
-      <workItem from="1655040033201" duration="24414000" />
+      <workItem from="1655040033201" duration="25425000" />
     </task>
     <task id="LOCAL-00001" summary="Já se adicionam cadeiras novas">
       <created>1653438954603</created>
@@ -221,7 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654959070768</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Feito APIs">
+      <created>1655073261209</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1655073261209</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Feito APIs">
+      <created>1655073308989</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1655073308989</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +239,8 @@
     <MESSAGE value="fiz o collectstatic" />
     <MESSAGE value="Os comentarios ja funcionam" />
     <MESSAGE value="TFCs layout feito" />
-    <option name="LAST_COMMIT_MESSAGE" value="TFCs layout feito" />
+    <MESSAGE value="Feito APIs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feito APIs" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
