@@ -1,0 +1,92 @@
+.button_web {
+    border-bottom: 3px solid white;
+}
+
+main {
+    background: url("../../portfolio/images/web_bg_2.jpg") no-repeat fixed center;
+    background: #F5F5F5;
+
+}
+
+.quizz_div {
+    padding: 20px;
+}
+
+.quizz_titulo {
+    text-align: center;
+}
+
+.info_container {
+    width: 700px;
+    margin: auto;
+}
+
+legend {
+    text-align: center;
+}
+
+fieldset {
+    padding: 10px;
+}
+
+
+
+.perguntas_container {
+    width: 700px;
+    margin: auto;
+
+}
+
+.submit_btn {
+    position: absolute;
+    margin-top: 20px;
+    left: 50%;
+}
+
+.meteorologia_div {
+    text-align: center;
+    padding-top: 80px;
+
+}
+
+.meteo_conteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.meteo_card {
+    background-color: lightgray;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.meteo_card h2 {
+    padding-top: 10px;
+}
+
+.content_grid {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 120px;
+}
+
+.img_div {
+    background: url("../../../static/web/images/1.png");
+    background-size: cover;
+}
+
+.info_div {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.google_search {
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}

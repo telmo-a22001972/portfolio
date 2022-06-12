@@ -1,0 +1,12 @@
+{%  extends 'portfolio/layout.html' %}
+
+
+{% block script %}
+    {% load static %}
+    <script src="{% static 'testes_js/js/counter.js'%}" defer></script>
+{% endblock %}
+
+{% block main %}
+    <h1></h1>
+    <button onclick="count()">Conta</button>
+{% endblock %}

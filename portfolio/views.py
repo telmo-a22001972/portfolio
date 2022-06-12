@@ -9,6 +9,22 @@ from .models import *
 from .quizz_functs import pontuacao_quizz
 
 
+def javascript_tests_page_view(request):
+    return render(request, 'testes_js/javascript_testes.html')
+
+
+def colors_page_view(req):
+    return render(req, 'testes_js/colors.html')
+
+
+def input_color_page_view(req):
+    return render(req, 'testes_js/input_color.html')
+
+
+def ipma_page_view(req):
+    return render(req, 'testes_js/IPMA.html')
+
+
 def home_page_view(request):
     return render(request, 'portfolio/home.html')
 
@@ -92,7 +108,7 @@ def web_page_view(request):
         r = PontuacaoQuizz(nome = name, pontuacao=pontuacao)
         r.save()
 
-    return render(request, 'portfolio/web.html')
+    return render(request, 'web/web.html')
 
 
 @login_required()

@@ -22,6 +22,11 @@ urlpatterns = [
     path('login', views.login_page_view, name='login'),
     path('logout', views.logout_page_view, name='logout'),
     path('criar_tfc', views.criar_tfc_page_view, name='criar_tfc'),
+    path('javascript_testes', views.javascript_tests_page_view, name='javascript_testes'),
+    path('colors', views.colors_page_view, name='colors'),
+    path('input_color', views.input_color_page_view, name='input_color'),
+    path('ipma', views.ipma_page_view, name='ipma'),
+
 
 
 

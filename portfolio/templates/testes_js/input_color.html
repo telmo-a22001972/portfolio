@@ -1,0 +1,12 @@
+{%  extends 'portfolio/layout.html' %}
+
+
+{% block script %}
+    {% load static %}
+    <script src="{% static 'testes_js/js/input_color.js'%}" defer></script>
+{% endblock %}
+
+{% block main %}
+    <h1 id="hello">Give me a color!</h1>
+    <input>
+{% endblock %}

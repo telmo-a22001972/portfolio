@@ -7,7 +7,7 @@
 }
 .main {
     height: 100%;
-    background-image: url("../images/hero_background_test2.jpg");
+    background-image: url("../images/hero_background_test2.de7ba93b94bc.jpg");
     background-repeat: no-repeat ;
     background-size: cover;
     background-position: center;
@@ -44,7 +44,7 @@ article.primeiro {
 article.segundo {
   /* como tem menu e rodapé visíveis (10vh cada), define-se como altura 80vh. */
   height: 80vh;
-  background-image: url("../images/hero_background.jpg");
+  background-image: url("../images/hero_background.b367e79925f6.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

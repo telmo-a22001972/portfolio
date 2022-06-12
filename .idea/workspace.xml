@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Mudei tamanho do nome da cadeira">
-      <change afterPath="$PROJECT_DIR$/portfolio/migrations/0022_tfc_autor_tfc_orientador.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/migrations/0023_alter_tfc_terceiros_autores_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_criar_tfc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/criar_tfc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="TFCs layout feito">
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/js/time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/testes_js/js/colors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/testes_js/js/counter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/testes_js/js/input_color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/testes_js/js/ipma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/web/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/web/images/transferir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/web/js/google_search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/web/js/ipma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/testes_js/IPMA.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/testes_js/colors.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/testes_js/input_color.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/testes_js/javascript_testes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_criar_tfc.84da3010540e.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_criar_tfc.84da3010540e.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_criar_tfc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_criar_tfc.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_projetos.e35456d91872.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/portfolio/css/styles_projetos.e35456d91872.css.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_projetos.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_projetos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_home.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_web.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/web/css/styles_web.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/web.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/web/web.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
     </list>
@@ -28,8 +43,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -54,21 +70,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/portfolio/templates/portfolio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/portfolio/templates/testes_js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\templates\testes_js" />
       <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\templates\portfolio" />
       <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\authenticate" />
       <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\blog\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\authenticate\css" />
-      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\authenticate\images" />
-      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\authenticate" />
-      <recent name="C:\Users\telmo\Desktop\portfolio_pre_blog\portfolio\static\blog\images" />
-      <recent name="C:\Users\telmo\Desktop\portfolio_pre_blog\portfolio\static\blog\css" />
+      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\web\css" />
+      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\web" />
+      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\templates\web" />
+      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\testes_js\js" />
+      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\testes_js" />
     </key>
   </component>
   <component name="RunManager">
@@ -115,7 +132,10 @@
       <workItem from="1653685632758" duration="4430000" />
       <workItem from="1654267145619" duration="1113000" />
       <workItem from="1654674119235" duration="4524000" />
-      <workItem from="1654953732494" duration="5200000" />
+      <workItem from="1654953732494" duration="6559000" />
+      <workItem from="1654991143103" duration="1137000" />
+      <workItem from="1654999634044" duration="166000" />
+      <workItem from="1655040033201" duration="24414000" />
     </task>
     <task id="LOCAL-00001" summary="Já se adicionam cadeiras novas">
       <created>1653438954603</created>
@@ -187,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653688822398</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="TFCs layout feito">
+      <created>1654959019352</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654959019352</updated>
+    </task>
+    <task id="LOCAL-00012" summary="TFCs layout feito">
+      <created>1654959070768</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654959070768</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +248,8 @@
     <MESSAGE value="mudança de sitio a estilizaçao do botao loggin" />
     <MESSAGE value="fiz o collectstatic" />
     <MESSAGE value="Os comentarios ja funcionam" />
-    <option name="LAST_COMMIT_MESSAGE" value="Os comentarios ja funcionam" />
+    <MESSAGE value="TFCs layout feito" />
+    <option name="LAST_COMMIT_MESSAGE" value="TFCs layout feito" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

@@ -1,13 +1,27 @@
 {%  extends 'portfolio/layout.html' %}
 
+{% block script %}
+    {% load static %}
+    <script src="{% static 'portfolio/js/time.js' %}"></script>
+
+{% endblock %}
 
 
 {% block main %}
     {% load static %}
     <link href="{% static 'portfolio/css/styles_home.css'  %}" rel="stylesheet" type="text/css">
 
+
+
     <main class="main">
+
         <h2 class="titulo">The universe doesn't sacrifice, life sacrifices</h2>
+        <div class="time">
+            <p id="datetime"></p>
+        </div>
+        <div>
+            <p id="teste"></p>
+        </div>
     </main>
 
 {% endblock %}

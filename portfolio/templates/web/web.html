@@ -1,11 +1,16 @@
 {%  extends 'portfolio/layout.html' %}
+{% block script %}
+    {% load static %}
+    <script src="{% static 'web/js/ipma.js' %}"></script>
+    <script src="{% static 'web/js/google_search.js' %}"></script>
+{% endblock %}
 
 {% block main %}
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portfolio/css/styles_web.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'web/css/styles_web.css' %}" type="text/css">
 
 	<div class="quizz_div">
-        <h1 class="quizz_titulo">Quizz</h1>
+        <h1 class="quizz_titulo" id="quizz">Quizz</h1>
          <form method="POST" action="" enctype="multipart/form-data">
              {% csrf_token %}
              <div class="info_container">
@@ -60,6 +65,75 @@
             <input type="submit" value="Submit" class="submit_btn">
             </form>
 
+    </div>
+
+    <div class="meteorologia_div">
+        <h1>Meteorologia</h1>
+        <br>
+
+        <div class="meteo_conteiner">
+            <div class="meteo_card">
+                <h2>Lisboa</h2>
+                <br>
+                <div class="content_grid">
+                    <div class="img_div">
+
+                    </div>
+                    <div class="info_div">
+                        <p id="data_lisboa">Data</p>
+
+                        <p id="t_max_lisboa">T.Max</p>
+                        <p id="t_min_lisboa">T.Min</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="meteo_card">
+                <h2 id="nome_cidade">Porto</h2>
+                <br>
+                <div class="content_grid">
+                    <div class="img_div">
+
+                    </div>
+                    <div class="info_div">
+                        <p id="data_porto">Data</p>
+
+                        <p id="t_max_porto">T.Max</p>
+                        <p id="t_min_porto">T.Min</p>
+                    </div>
+                </div>
+            </div>
+            <div class="meteo_card">
+                <h2 id="nome_cidade">Faro</h2>
+                <br>
+                <div class="content_grid">
+                    <div class="img_div">
+
+                    </div>
+                    <div class="info_div">
+                        <p id="data_faro">Data</p>
+
+                        <p id="t_max_faro">T.Max</p>
+                        <p id="t_min_faro">T.Min</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="google_search">
+        <h1>Get Top 4 Google search results:</h1>
+        <br>
+        <h2 id="result1"></h2>
+        <h2 id="result2"></h2>
+        <h2 id="result3"></h2>
+        <h2 id="result4"></h2>
+        <h2 id="result5"></h2>
+        <br><br>
+
+        <input type="text" id="question">
     </div>
 
 
