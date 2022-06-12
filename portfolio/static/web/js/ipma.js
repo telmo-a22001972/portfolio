@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1110600.json')
+
+    fetch('https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1110600.json')
         .then(resp => resp.json())
         .then(data => {
             const tmin = data.data[0].tMin
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('data_lisboa').innerHTML = "Dia: " + dia
     })
 
-    fetch('http://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1131200.json')
+    fetch('https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1131200.json')
         .then(resp => resp.json())
         .then(data => {
             const tmin = data.data[0].tMin
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('data_porto').innerHTML = "Dia: " + dia
     })
 
-    fetch('http://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1080500.json')
+    fetch('https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1080500.json')
         .then(resp => resp.json())
         .then(data => {
             const tmin = data.data[0].tMin
