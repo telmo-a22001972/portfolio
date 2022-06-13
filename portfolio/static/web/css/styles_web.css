@@ -90,3 +90,52 @@ fieldset {
     padding-top: 5vh;
     padding-bottom: 5vh;
 }
+
+.container {
+    font-size: 15px;
+    color: black;
+    width: 300px;
+    font-family: 'Roboto', sans-serif;
+    filter: none;
+    height: 50px;
+    border: 1px solid transparent;
+    background: lightgray;
+    border-radius: 40px;
+    transition: 0.3s ;
+}
+
+.search_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container:hover, .container:focus, .search_input:hover, .search_input:focus{
+    border-color: white;
+    background-color: rgba(0 0 0 / .01);
+    outline: 0;
+}
+
+.icon_div {
+   background: url(../images/pesquisar.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+}
+.search_input {
+    position: absolute;
+    border-top-right-radius:40px;
+    border-bottom-right-radius:40px;
+    width: 248px;
+    border: transparent;
+    background: lightgray;
+    filter: none;
+    height: 49px;
+    font-family: 'Roboto', sans-serif;
+    left: 50px;
+
+}
+.container {
+    position: relative;
+}

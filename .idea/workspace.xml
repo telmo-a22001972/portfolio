@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Feito APIs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/static/web/js/ipma.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/web/js/ipma.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/web/css/styles_web.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/web/css/styles_web.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/web/web.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/web/web.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,7 @@
       <workItem from="1654953732494" duration="6559000" />
       <workItem from="1654991143103" duration="1137000" />
       <workItem from="1654999634044" duration="166000" />
-      <workItem from="1655040033201" duration="26374000" />
+      <workItem from="1655040033201" duration="30109000" />
     </task>
     <task id="LOCAL-00001" summary="Já se adicionam cadeiras novas">
       <created>1653438954603</created>
@@ -216,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655074153974</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Feito APIs">
+      <created>1655075123943</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1655075123943</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
