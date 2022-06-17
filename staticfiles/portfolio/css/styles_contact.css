@@ -1,0 +1,86 @@
+.button_contact {
+    border-bottom: 3px solid white;
+}
+
+main {
+    background: url("../images/contact-me.jpg") fixed center;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 50vh;
+    padding: 10px;
+}
+
+.form_div {
+    position: relative;
+
+}
+
+.name {
+    position: absolute;
+    padding-left: 20px;
+    left: 10%;
+    top: 20%;
+    height: 40px;
+    width: 35%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.name:focus, .email:focus, .message:focus {
+    outline: 0;
+}
+.email {
+    position: absolute;
+    padding-left: 20px;
+    top: 20%;
+    right: 10%;
+    width: 35%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+.message {
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 10px;
+    bottom: 20%;
+    left: 10%;
+    height: 100px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+
+
+
+.links_div {
+    margin-top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 20vh;
+}
+
+.socials_link {
+    height: 50px;
+    width: 50px;
+}
+
+
+.contact_div {
+    margin: auto;
+    background: white;
+    width: 50%;
+    height: 70vh;
+    border-radius: 20px;
+}
+
+.contact_div h2 {
+    text-align: center;
+    padding: 20px;
+}

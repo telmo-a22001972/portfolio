@@ -1,0 +1,38 @@
+{%  extends 'portfolio/layout.html' %}
+
+{% block main %}
+    {% load static %}
+    <link href="{% static 'portfolio/css/styles_contact.css'  %}" rel="stylesheet" type="text/css">
+    <br><br>
+    <br><br>
+
+    <div class="contact_div">
+        <h2>Contact me</h2>
+        <div class="grid_container">
+            <div class="links_div">
+                <a href="https://github.com/telmo-a22001972" target="_blank">
+                    <img src="{% static 'portfolio/images/github_logo.gif' %}" alt="" class="socials_link">
+                </a>
+                <a href="https://www.linkedin.com/in/telmo-panaças/" target="_blank">
+                    <img src="{% static 'portfolio/images/linked_in.gif' %}" alt="" class="socials_link">
+                </a>
+            </div>
+
+            <div class="form_div">
+
+                <form action="{% url 'portfolio:contact' %}" method="post">
+                    {% csrf_token %}
+                    <input type="text" placeholder="Your Name" required class="name" name="name">
+                    <input type="email" placeholder="Your Email" required class="email" name="email">
+                    <textarea placeholder="Message" required class="message" name="message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

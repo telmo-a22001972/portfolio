@@ -26,6 +26,8 @@ urlpatterns = [
     path('colors', views.colors_page_view, name='colors'),
     path('input_color', views.input_color_page_view, name='input_color'),
     path('ipma', views.ipma_page_view, name='ipma'),
+    path('contact', views.contact_page_view, name='contact'),
+
 
 
 

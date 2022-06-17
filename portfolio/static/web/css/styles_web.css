@@ -9,7 +9,10 @@ main {
 }
 
 .quizz_div {
-    padding: 20px;
+    padding: 70px 20px 20px;
+    height: 550px;
+    align-items: center;
+
 }
 
 .quizz_titulo {
@@ -37,15 +40,18 @@ fieldset {
 
 }
 
+.submit_div {
+    text-align: center;
+}
+
 .submit_btn {
     position: absolute;
     margin-top: 20px;
-    left: 50%;
 }
 
 .meteorologia_div {
     text-align: center;
-    padding-top: 80px;
+    padding-top: 20px;
 
 }
 
@@ -138,4 +144,22 @@ fieldset {
 }
 .container {
     position: relative;
+}
+
+.programacao_web_div {
+    text-align: center;
+}
+
+.labs_div {
+    padding-top: 5vh;
+    height: 100px;
+}
+
+.labs {
+    text-decoration: none;
+    color: black;
+}
+
+.tecnologias {
+    padding: 20px;
 }

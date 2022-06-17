@@ -29,6 +29,19 @@ def home_page_view(request):
     return render(request, 'portfolio/home.html')
 
 
+def contact_page_view(req):
+
+    if req.method == "POST":
+        name = req.method["name"]
+        email = req.method["email"]
+        message = req.method["message"]
+
+
+        return render(req, 'portfolio/contact.html')
+    else:
+        return render(req, 'portfolio/contact.html')
+
+
 def layout_page_view(request):
     return render(request, 'portfolio/layout.html')
 

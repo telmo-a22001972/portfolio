@@ -7,16 +7,9 @@ main {
     min-height: 85vh;
 }
 
-.split-conteiner{
-    display: grid;
-    grid-template-columns: 60vh auto;
-
-}
-
 
 .info-side {
     padding: 10px;
-    background: #0d0d0d;
     color: white;
     text-align: center;
 }
@@ -88,4 +81,27 @@ main {
     padding: 5px 10px;
     border-radius: 5px;
     background: #36454F;
+}
+
+.educacao{
+    color: white;
+    background: #0d0d0d;
+    height: 150px;
+}
+
+.educacao h2 {
+    text-align: center;
+}
+
+.escolas {
+    text-align: center;
+    padding: 30px;
+}
+
+.interesses {
+    text-align: center;
+    color: white;
+}
+.interesses li {
+    padding: 30px;
 }

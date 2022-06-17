@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Feito APIs">
+    <list default="true" id="adc7fcb3-1d4f-460f-b2b4-d749dababb31" name="Changes" comment="Melhoria na searchbar">
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/contact-me.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/github_logo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/linked_in.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_about.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/styles_about.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/static/web/css/styles_web.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/web/css/styles_web.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/criar_cadeira.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/criar_cadeira.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/templates/web/web.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/web/web.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,15 +29,23 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,13 +64,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/portfolio/templates/testes_js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/portfolio/static/portfolio/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\templates\testes_js" />
+      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\portfolio\images" />
       <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\templates\portfolio" />
+      <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\templates\testes_js" />
       <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\authenticate" />
       <recent name="C:\Users\telmo\Desktop\portoflio\portfolio\static\blog\images" />
     </key>
@@ -110,7 +130,8 @@
       <workItem from="1654953732494" duration="6559000" />
       <workItem from="1654991143103" duration="1137000" />
       <workItem from="1654999634044" duration="166000" />
-      <workItem from="1655040033201" duration="30109000" />
+      <workItem from="1655040033201" duration="30646000" />
+      <workItem from="1655389988333" duration="13133000" />
     </task>
     <task id="LOCAL-00001" summary="Já se adicionam cadeiras novas">
       <created>1653438954603</created>
@@ -224,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655075123943</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Melhoria na searchbar">
+      <created>1655080916662</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1655080916662</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +281,8 @@
     <MESSAGE value="Os comentarios ja funcionam" />
     <MESSAGE value="TFCs layout feito" />
     <MESSAGE value="Feito APIs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feito APIs" />
+    <MESSAGE value="Melhoria na searchbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Melhoria na searchbar" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
